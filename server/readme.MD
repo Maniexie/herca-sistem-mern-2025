@@ -14,10 +14,10 @@ Clone the project
   git clone https://github.com/Maniexie/herca-sistem-mern-2025.git
 ```
 
-Change Directory or Entry **client** Folder
+Change Directory or Entry **server** Folder
 
 ```bash
-  cd client
+  cd server
 ```
 
 Install required dependencies
