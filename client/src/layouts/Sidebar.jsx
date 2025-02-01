@@ -24,10 +24,10 @@ const Sidebar = ({ children }) => {
                     </div>
                     <hr />
                     <div className="mt-5">
-                        <Link to='/dashboard' className='block py-2 px-4 hover:bg-amber-200 transition duration-200'>
+                        <Link to='/dashboard' className='block text-lg py-2 px-4  hover:bg-amber-200 transition duration-200'>
                             Dashboard
                         </Link>
-                        <Link to='/penjualan' className='block py-2 px-4 hover:bg-amber-200 transition duration-200'>
+                        <Link to='/penjualan' className='block text-lg py-2 px-4 hover:bg-amber-200 transition duration-200'>
                             Penjualan
                         </Link>
                     </div>
