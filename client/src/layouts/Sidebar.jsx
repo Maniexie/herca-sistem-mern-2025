@@ -34,6 +34,9 @@ const Sidebar = ({ children }) => {
                         <Link to='/pembayaran' className='block text-lg py-2 px-4 hover:bg-amber-200 hover: rounded-2xl hover:text-black transition duration-200'>
                             Pembayaran
                         </Link>
+                        <Link to='/komisi' className='block text-lg py-2 px-4 hover:bg-amber-200 hover: rounded-2xl hover:text-black transition duration-200'>
+                            Komisi
+                        </Link>
                     </div>
                 </div>
             </div>

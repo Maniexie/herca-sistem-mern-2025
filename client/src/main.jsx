@@ -5,6 +5,7 @@ import './App.css'
 import Dashboard from "./pages/Dashboard";
 import Penjualan from "./pages/Penjualan";
 import Pembayaran from "./pages/Pembayaran";
+import Komisi from "./pages/Komisi";
 
 const root = document.getElementById("root");
 
@@ -15,6 +16,7 @@ ReactDOM.createRoot(root).render(
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/penjualan" element={<Penjualan />} />
       <Route path="/pembayaran" element={<Pembayaran />} />
+      <Route path="/komisi" element={<Komisi />} />
     </Routes>
   </BrowserRouter >
 );
