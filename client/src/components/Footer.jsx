@@ -2,7 +2,7 @@ import React from 'react'
 import { Typography } from "@material-tailwind/react";
 
 const Footer = () => (
-    <footer className="bg-amber-300 text-white px-6 py-6 flex w-full flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 border-t border-blue-gray-50  text-center md:justify-between max-sm:py-2">
+    <footer className="bg-gray-400 text-white px-6 py-6 flex w-full flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 border-t border-blue-gray-50  text-center md:justify-between max-sm:py-2">
         <Typography color="blue-gray" className="font-normal hover:animate-bounce hover:cursor-pointer">
             &copy; Herca Group {new Date().getFullYear()}
         </Typography>

@@ -1,16 +1,15 @@
 import React from 'react'
 import Sidebar from '../layouts/Sidebar'
-import Table from '../components/Table'
 
-
-const Dashboard = () => {
+const Pembayaran = () => {
     return (
         <div>
             <Sidebar>
-                <Table position={"Marketing"} />
+                <h1>Pembayaran</h1>
             </Sidebar>
         </div>
+
     )
 }
 
-export default Dashboard
+export default Pembayaran
