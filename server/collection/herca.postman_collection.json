@@ -1,0 +1,1449 @@
+{
+	"info": {
+		"_postman_id": "fcb41c71-ded0-4a91-8146-e9e2d8ce1929",
+		"name": "herca",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31838268"
+	},
+	"item": [
+		{
+			"name": "marketing",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/marketings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"marketings"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/marketings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"marketings"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "468"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d4-L2vMPPPQCVzMHBpYELgOIPV6nGM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Feb 2025 07:46:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"message\": \"List Of Marketing\",\n    \"data\": [\n        {\n            \"_id\": \"679dd1240532d0063f9a50fd\",\n            \"name\": \"Alfandy\",\n            \"createdAt\": \"2025-02-01T07:45:40.305Z\",\n            \"updatedAt\": \"2025-02-01T07:45:40.305Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"679dd1430532d0063f9a50ff\",\n            \"name\": \"Mery\",\n            \"createdAt\": \"2025-02-01T07:46:11.679Z\",\n            \"updatedAt\": \"2025-02-01T07:46:11.679Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"679dd14a0532d0063f9a5101\",\n            \"name\": \"Danang\",\n            \"createdAt\": \"2025-02-01T07:46:18.823Z\",\n            \"updatedAt\": \"2025-02-01T07:46:18.823Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "get By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/marketing/679dd14a0532d0063f9a5101",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"marketing",
+								"679dd14a0532d0063f9a5101"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get By ID OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/marketing/679dd14a0532d0063f9a5101",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"marketing",
+										"679dd14a0532d0063f9a5101"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "199"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c7-hz0/xedoN4LStMJLPNO23+MTmaM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Feb 2025 07:47:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"message\": \"List Of Marketing By ID\",\n    \"data\": {\n        \"_id\": \"679dd14a0532d0063f9a5101\",\n        \"name\": \"Danang\",\n        \"createdAt\": \"2025-02-01T07:46:18.823Z\",\n        \"updatedAt\": \"2025-02-01T07:46:18.823Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Laila Maharani\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/marketing",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"marketing"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Alfandy\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/marketing",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"marketing"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "207"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cf-6A8bgZtSwQ/kdxL1GT149k9k1Z4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Feb 2025 07:45:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 201,\n    \"message\": \"Marketing Successfully created\",\n    \"data\": {\n        \"name\": \"Alfandy\",\n        \"_id\": \"679dd1240532d0063f9a50fd\",\n        \"createdAt\": \"2025-02-01T07:45:40.305Z\",\n        \"updatedAt\": \"2025-02-01T07:45:40.305Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Danang Nugraha\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/marketing/679dd14a0532d0063f9a5101",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"marketing",
+								"679dd14a0532d0063f9a5101"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Danang Nugraha\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/marketing/679dd14a0532d0063f9a5101",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"marketing",
+										"679dd14a0532d0063f9a5101"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "223"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"df-mIQn+cRnfTIQC0P81oVydXJiZJg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Feb 2025 07:48:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"message\": \"Update Marketing , NAME: Danang Nugraha\",\n    \"data\": {\n        \"_id\": \"679dd14a0532d0063f9a5101\",\n        \"name\": \"Danang Nugraha\",\n        \"createdAt\": \"2025-02-01T07:46:18.823Z\",\n        \"updatedAt\": \"2025-02-01T07:48:58.660Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Gayus 123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/marketing/679dd20b0532d0063f9a5109",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"marketing",
+								"679dd20b0532d0063f9a5109"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Gayus 123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/marketing/679dd20b0532d0063f9a5109",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"marketing",
+										"679dd20b0532d0063f9a5109"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "216"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d8-40NKuv3wqrfi01V2MylxwXaFuHo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Feb 2025 07:49:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"message\": \"Delete Marketing , NAME: Gayus 123\",\n    \"data\": {\n        \"_id\": \"679dd20b0532d0063f9a5109\",\n        \"name\": \"Anto Permana\",\n        \"createdAt\": \"2025-02-01T07:49:31.530Z\",\n        \"updatedAt\": \"2025-02-01T07:49:31.530Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "penjualan",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/penjualan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"penjualan"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/penjualan",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"penjualan"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "638"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27e-mc+JdYsTPCwS2GhLL8ATTcZNrOQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Feb 2025 07:53:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"message\": \"List Of Penjualan\",\n    \"data\": [\n        {\n            \"_id\": \"679dd29c0532d0063f9a510e\",\n            \"marketing_id\": \"679dd14a0532d0063f9a5101\",\n            \"transaction_number\": \"TRX001\",\n            \"date\": \"2025-02-01T07:51:56.067Z\",\n            \"cargo_fee\": 25000,\n            \"total_balance\": 3000000,\n            \"grand_total\": 3025000,\n            \"createdAt\": \"2025-02-01T07:51:56.069Z\",\n            \"updatedAt\": \"2025-02-01T07:51:56.069Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"679dd2f90532d0063f9a5111\",\n            \"marketing_id\": \"679dd1430532d0063f9a50ff\",\n            \"transaction_number\": \"TRX002\",\n            \"date\": \"2025-02-01T07:53:29.207Z\",\n            \"cargo_fee\": 25000,\n            \"total_balance\": 320000,\n            \"grand_total\": 345000,\n            \"createdAt\": \"2025-02-01T07:53:29.208Z\",\n            \"updatedAt\": \"2025-02-01T07:53:29.208Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/penjualan/679de10d26d6e402b438b760",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"penjualan",
+								"679de10d26d6e402b438b760"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get by id OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/penjualan/679dd2f90532d0063f9a5111",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"penjualan",
+										"679dd2f90532d0063f9a5111"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "351"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15f-eWQlV/sPwRfU3abB8Hjw+hJy9+w\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Feb 2025 07:55:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"message\": \"List Of Penjualan By ID\",\n    \"data\": {\n        \"_id\": \"679dd2f90532d0063f9a5111\",\n        \"marketing_id\": \"679dd1430532d0063f9a50ff\",\n        \"transaction_number\": \"TRX002\",\n        \"date\": \"2025-02-01T07:53:29.207Z\",\n        \"cargo_fee\": 25000,\n        \"total_balance\": 320000,\n        \"grand_total\": 345000,\n        \"createdAt\": \"2025-02-01T07:53:29.208Z\",\n        \"updatedAt\": \"2025-02-01T07:53:29.208Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"marketing_id\": \"679de15526d6e402b438b76c\",\r\n    \"cargo_fee\": 25000,\r\n    \"total_balance\": 10000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/penjualan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"penjualan"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"marketing_id\": \"679dd14a0532d0063f9a5101\",\r\n    \"cargo_fee\": 25000,\r\n    \"total_balance\": 3000000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/penjualan",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"penjualan"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "360"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"168-OSvGny7H1fjnolwuD2lSAOyALMg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Feb 2025 07:51:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 201,\n    \"message\": \"Penjualan Successfully created\",\n    \"data\": {\n        \"marketing_id\": \"679dd14a0532d0063f9a5101\",\n        \"transaction_number\": \"TRX001\",\n        \"date\": \"2025-02-01T07:51:56.067Z\",\n        \"cargo_fee\": 25000,\n        \"total_balance\": 3000000,\n        \"grand_total\": 3025000,\n        \"_id\": \"679dd29c0532d0063f9a510e\",\n        \"createdAt\": \"2025-02-01T07:51:56.069Z\",\n        \"updatedAt\": \"2025-02-01T07:51:56.069Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cargo_fee\": 1000,\r\n    \"total_balance\": 2000\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/penjualan/679dd3da0532d0063f9a511a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"penjualan",
+								"679dd3da0532d0063f9a511a"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"cargo_fee\": 1000,\r\n    \"total_balance\": 2000\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/penjualan/679dd3da0532d0063f9a511a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"penjualan",
+										"679dd3da0532d0063f9a511a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "353"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"161-Qjbt7ZvFwMY38BXqzRqk0EL0664\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Feb 2025 07:57:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"message\": \"Penjualan successfully updated\",\n    \"data\": {\n        \"_id\": \"679dd3da0532d0063f9a511a\",\n        \"marketing_id\": \"679dd1430532d0063f9a50ff\",\n        \"transaction_number\": \"TRX003\",\n        \"date\": \"2025-02-01T07:57:38.289Z\",\n        \"cargo_fee\": 1000,\n        \"total_balance\": 2000,\n        \"grand_total\": 3000,\n        \"createdAt\": \"2025-02-01T07:57:14.329Z\",\n        \"updatedAt\": \"2025-02-01T07:57:38.290Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cargo_fee\": 20000,\r\n    \"total_balance\": 20000\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/penjualan/679dd3da0532d0063f9a511a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"penjualan",
+								"679dd3da0532d0063f9a511a"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"cargo_fee\": 20000,\r\n    \"total_balance\": 20000\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/penjualan/679dd3da0532d0063f9a511a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"penjualan",
+										"679dd3da0532d0063f9a511a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "353"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"161-YbTlnXuIvFXgDvjgtvDoYP6HtIE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Feb 2025 07:58:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"message\": \"Penjualan successfully deleted\",\n    \"data\": {\n        \"_id\": \"679dd3da0532d0063f9a511a\",\n        \"marketing_id\": \"679dd1430532d0063f9a50ff\",\n        \"transaction_number\": \"TRX003\",\n        \"date\": \"2025-02-01T07:57:38.289Z\",\n        \"cargo_fee\": 1000,\n        \"total_balance\": 2000,\n        \"grand_total\": 3000,\n        \"createdAt\": \"2025-02-01T07:57:14.329Z\",\n        \"updatedAt\": \"2025-02-01T07:57:38.290Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "komisi",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/komisi?year=2025&month=02",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"komisi"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2025"
+								},
+								{
+									"key": "month",
+									"value": "02"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all komisi OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/komisi?year=2025&month=02",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"komisi"
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "2025"
+										},
+										{
+											"key": "month",
+											"value": "02"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "778"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"30a-VbqaXhv2hIIod8jGvv3x2oAnp8E\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Feb 2025 09:17:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"message\": \"Komisi marketing berhasil dihitung\",\n    \"data\": [\n        {\n            \"marketing_name\": \"Alfandy\",\n            \"bulan\": \"02-2025\",\n            \"omzet\": 470025000,\n            \"komisi_percentage\": 5,\n            \"komisi_nominal\": 23501250\n        },\n        {\n            \"marketing_name\": \"Mery\",\n            \"bulan\": \"02-2025\",\n            \"omzet\": 1000310000,\n            \"komisi_percentage\": 10,\n            \"komisi_nominal\": 100031000\n        },\n        {\n            \"marketing_name\": \"Danang Nugraha\",\n            \"bulan\": \"02-2025\",\n            \"omzet\": 103000000,\n            \"komisi_percentage\": 2.5,\n            \"komisi_nominal\": 2575000\n        },\n        {\n            \"marketing_name\": \"Anto Permana\",\n            \"bulan\": \"02-2025\",\n            \"omzet\": 100000025000,\n            \"komisi_percentage\": 10,\n            \"komisi_nominal\": 10000002500\n        },\n        {\n            \"marketing_name\": \"Gayus Jayadi\",\n            \"bulan\": \"02-2025\",\n            \"omzet\": 35000,\n            \"komisi_percentage\": 0,\n            \"komisi_nominal\": 0\n        },\n        {\n            \"marketing_name\": \"Rudi Tabuti\",\n            \"bulan\": \"02-2025\",\n            \"omzet\": 100000025000,\n            \"komisi_percentage\": 10,\n            \"komisi_nominal\": 10000002500\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "pembayaran",
+			"item": [
+				{
+					"name": "get all payment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/pembayaran",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"pembayaran"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all payment OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/pembayaran",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"pembayaran"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "564"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"234-qXv6BbBuHMb8aGUd+d0wzjupPzI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Feb 2025 08:44:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"message\": \"List Of Pembayaran\",\n    \"data\": [\n        {\n            \"_id\": \"679dd45f0532d0063f9a5121\",\n            \"penjualan_id\": \"679dd2f90532d0063f9a5111\",\n            \"amount_paid\": 50000,\n            \"remaining_payment\": 295000,\n            \"payment_date\": \"2025-02-01T07:59:27.993Z\",\n            \"createdAt\": \"2025-02-01T07:59:27.993Z\",\n            \"updatedAt\": \"2025-02-01T07:59:27.993Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"679dde03e5a6b76c2f310db8\",\n            \"penjualan_id\": \"679dd29c0532d0063f9a510e\",\n            \"amount_paid\": 50000,\n            \"remaining_payment\": 2975000,\n            \"payment_date\": \"2025-02-01T08:40:35.218Z\",\n            \"createdAt\": \"2025-02-01T08:40:35.222Z\",\n            \"updatedAt\": \"2025-02-01T08:40:35.222Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "get payment by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"penjualan_id\": \"id_penjualan\",  // Gantilah dengan penjualan_id yang valid\r\n  \"jumlah_dibayar\": 5000000  // Gantilah dengan jumlah yang dibayar\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/pembayaran/679dde03e5a6b76c2f310db8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"pembayaran",
+								"679dde03e5a6b76c2f310db8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get payment by ID OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"penjualan_id\": \"id_penjualan\",  // Gantilah dengan penjualan_id yang valid\r\n  \"jumlah_dibayar\": 5000000  // Gantilah dengan jumlah yang dibayar\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/pembayaran/679dde03e5a6b76c2f310db8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"pembayaran",
+										"679dde03e5a6b76c2f310db8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "341"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"155-mlKZZ3935xpxAOCck6pmj/CJed0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Feb 2025 08:44:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"message\": \"Detail Pembayaran By ID: 679dde03e5a6b76c2f310db8\",\n    \"data\": {\n        \"_id\": \"679dde03e5a6b76c2f310db8\",\n        \"penjualan_id\": \"679dd29c0532d0063f9a510e\",\n        \"amount_paid\": 50000,\n        \"remaining_payment\": 2975000,\n        \"payment_date\": \"2025-02-01T08:40:35.218Z\",\n        \"createdAt\": \"2025-02-01T08:40:35.222Z\",\n        \"updatedAt\": \"2025-02-01T08:40:35.222Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get payment by penjualan ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"penjualan_id\": \"id_penjualan\",  // Gantilah dengan penjualan_id yang valid\r\n  \"jumlah_dibayar\": 5000000  // Gantilah dengan jumlah yang dibayar\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/pembayaran-detail/679dd2f90532d0063f9a5111",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"pembayaran-detail",
+								"679dd2f90532d0063f9a5111"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get payment by penjualan ID OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"penjualan_id\": \"id_penjualan\",  // Gantilah dengan penjualan_id yang valid\r\n  \"jumlah_dibayar\": 5000000  // Gantilah dengan jumlah yang dibayar\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/pembayaran-detail/679dd2f90532d0063f9a5111",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"pembayaran-detail",
+										"679dd2f90532d0063f9a5111"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "613"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"265-2p6SPN5PHq2M7N/E0I4SZLfBTfc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Feb 2025 08:45:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"message\": \"Daftar Pembayaran By Penjualan ID:679dd2f90532d0063f9a5111\",\n    \"data\": [\n        {\n            \"_id\": \"679dd45f0532d0063f9a5121\",\n            \"penjualan_id\": {\n                \"_id\": \"679dd2f90532d0063f9a5111\",\n                \"marketing_id\": \"679dd1430532d0063f9a50ff\",\n                \"transaction_number\": \"TRX002\",\n                \"date\": \"2025-02-01T07:53:29.207Z\",\n                \"cargo_fee\": 25000,\n                \"total_balance\": 320000,\n                \"grand_total\": 295000,\n                \"createdAt\": \"2025-02-01T07:53:29.208Z\",\n                \"updatedAt\": \"2025-02-01T07:59:27.995Z\",\n                \"__v\": 0\n            },\n            \"amount_paid\": 50000,\n            \"remaining_payment\": 295000,\n            \"payment_date\": \"2025-02-01T07:59:27.993Z\",\n            \"createdAt\": \"2025-02-01T07:59:27.993Z\",\n            \"updatedAt\": \"2025-02-01T07:59:27.993Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"penjualan_id\": \"679de16226d6e402b438b76f\", \r\n  \"amount_paid\": 50000 \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/pembayaran",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"pembayaran"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "payment OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"penjualan_id\": \"679dd2f90532d0063f9a5111\", \r\n  \"amount_paid\": 50000 \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/pembayaran",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"pembayaran"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "318"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13e-uM828GkPSm5TPV11HC5l693NG5A\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Feb 2025 07:59:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 201,\n    \"message\": \"Pembayaran berhasil dicatat\",\n    \"data\": {\n        \"penjualan_id\": \"679dd2f90532d0063f9a5111\",\n        \"amount_paid\": 50000,\n        \"remaining_payment\": 295000,\n        \"_id\": \"679dd45f0532d0063f9a5121\",\n        \"payment_date\": \"2025-02-01T07:59:27.993Z\",\n        \"createdAt\": \"2025-02-01T07:59:27.993Z\",\n        \"updatedAt\": \"2025-02-01T07:59:27.993Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
