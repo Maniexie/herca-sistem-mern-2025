@@ -1,12 +1,10 @@
 const Penjualan = require("../models/Penjualan");
 const Pembayaran = require("../models/Pembayaran");
 
-// API untuk membuat pembayaran
 const createPembayaran = async (req, res) => {
-  const { penjualan_id, jumlah_dibayar } = req.body;
+  const { penjualan_id, amount_paid } = req.body;
 
   try {
-    // Cari transaksi penjualan berdasarkan penjualan_id
     const penjualan = await Penjualan.findById(penjualan_id);
     if (!penjualan) {
       return res.status(404).json({
@@ -14,27 +12,23 @@ const createPembayaran = async (req, res) => {
       });
     }
 
-    // Hitung sisa pembayaran (grand_total - jumlah_dibayar)
-    const sisa_pembayaran = penjualan.grand_total - jumlah_dibayar;
+    const remaining_payment = penjualan.grand_total - amount_paid;
 
-    if (sisa_pembayaran < 0) {
+    if (remaining_payment < 0) {
       return res.status(400).json({
         message: "Jumlah yang dibayar melebihi grand total",
       });
     }
 
-    // Buat data pembayaran baru
     const pembayaran = new Pembayaran({
       penjualan_id,
-      jumlah_dibayar,
-      sisa_pembayaran,
+      amount_paid,
+      remaining_payment,
     });
 
-    // Simpan pembayaran
     await pembayaran.save();
 
-    // Update grand_total pada penjualan dengan sisa pembayaran
-    penjualan.grand_total = sisa_pembayaran;
+    penjualan.grand_total = remaining_payment;
     await penjualan.save();
 
     res.status(201).json({
@@ -50,12 +44,10 @@ const createPembayaran = async (req, res) => {
   }
 };
 
-// API untuk melihat daftar pembayaran untuk sebuah transaksi penjualan
-const getPembayaranByPenjualan = async (req, res) => {
+const getPembayaranByPenjualanId = async (req, res) => {
   const { penjualan_id } = req.params;
 
   try {
-    // Cari semua pembayaran untuk transaksi penjualan tertentu
     const pembayaran = await Pembayaran.find({ penjualan_id }).populate(
       "penjualan_id"
     );
@@ -68,7 +60,54 @@ const getPembayaranByPenjualan = async (req, res) => {
 
     res.status(200).json({
       status_code: 200,
-      message: "Daftar Pembayaran",
+      message: "Daftar Pembayaran By Penjualan ID:" + penjualan_id,
+      data: pembayaran,
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: "Terjadi kesalahan saat mengambil data pembayaran",
+      error: error.message,
+    });
+  }
+};
+
+const getPembayaranById = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const pembayaran = await Pembayaran.findById(id);
+
+    if (!pembayaran) {
+      return res.status(404).json({
+        message: "Pembayaran tidak ditemukan",
+      });
+    }
+
+    res.status(200).json({
+      status_code: 200,
+      message: "Detail Pembayaran By ID: " + req.params.id,
+      data: pembayaran,
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: "Terjadi kesalahan saat mengambil data berdasarkan ID",
+      error: error.message,
+    });
+  }
+};
+
+const getAllPembayaran = async (req, res) => {
+  try {
+    const pembayaran = await Pembayaran.find();
+
+    if (!pembayaran) {
+      return res
+        .status(404)
+        .json({ message: "Pembayaran not found", status_code: 404 });
+    }
+
+    res.status(200).json({
+      status_code: 200,
+      message: "List Of Pembayaran",
       data: pembayaran,
     });
   } catch (error) {
@@ -81,5 +120,7 @@ const getPembayaranByPenjualan = async (req, res) => {
 
 module.exports = {
   createPembayaran,
-  getPembayaranByPenjualan,
+  getPembayaranByPenjualanId,
+  getAllPembayaran,
+  getPembayaranById,
 };

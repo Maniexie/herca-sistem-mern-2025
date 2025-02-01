@@ -1,23 +1,11 @@
 const Penjualan = require("../models/Penjualan");
 const Marketing = require("../models/Marketing");
-
-const calculateKomisi = (omzet) => {
-  if (omzet >= 500000000) {
-    return { percentage: 10, nominal: omzet * 0.1 };
-  } else if (omzet >= 200000000) {
-    return { percentage: 5, nominal: omzet * 0.05 };
-  } else if (omzet >= 100000000) {
-    return { percentage: 2.5, nominal: omzet * 0.025 };
-  } else {
-    return { percentage: 0, nominal: 0 };
-  }
-};
+const calculateKomisi = require("../utils/calculateKomisi");
 
 const getKomisiPerMarketing = async (req, res) => {
-  const { year, month } = req.query; // Menerima tahun dan bulan sebagai query parameter
+  const { year, month } = req.query;
 
   try {
-    // Mengambil semua penjualan berdasarkan bulan dan tahun
     const penjualan = await Penjualan.aggregate([
       {
         $match: {
@@ -29,30 +17,35 @@ const getKomisiPerMarketing = async (req, res) => {
       },
       {
         $group: {
-          _id: "$marketing_id", // Group berdasarkan marketing_id
-          totalOmzet: { $sum: "$grand_total" }, // Total omzet per marketing
+          _id: "$marketing_id",
+          totalOmzet: { $sum: "$grand_total" },
         },
       },
     ]);
 
-    // Mengambil data marketing berdasarkan marketing_id
+    const marketingData = await Marketing.find({});
+
     const result = [];
 
-    for (const item of penjualan) {
-      const marketing = await Marketing.findById(item._id); // Mencari marketing berdasarkan id
+    for (const marketing of marketingData) {
+      const penjualanItem = penjualan.find(
+        (item) => item._id.toString() === marketing._id.toString()
+      );
 
-      if (marketing) {
-        // Hitung komisi berdasarkan total omzet
-        const { percentage, nominal } = calculateKomisi(item.totalOmzet);
-
-        result.push({
-          marketing_name: marketing.name,
-          bulan: `${month}-${year}`,
-          omzet: item.totalOmzet,
-          komisi_percentage: percentage,
-          komisi_nominal: nominal,
-        });
+      let totalOmzet = 0;
+      if (penjualanItem) {
+        totalOmzet = penjualanItem.totalOmzet;
       }
+
+      const { percentage, nominal } = calculateKomisi(totalOmzet);
+
+      result.push({
+        marketing_name: marketing.name,
+        bulan: `${month}-${year}`,
+        omzet: totalOmzet,
+        komisi_percentage: percentage,
+        komisi_nominal: nominal,
+      });
     }
 
     res.status(200).json({

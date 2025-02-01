@@ -4,20 +4,20 @@ const pembayaranSchema = new mongoose.Schema(
   {
     penjualan_id: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Penjualan", // Menghubungkan dengan Penjualan
+      ref: "Penjualan",
       required: true,
     },
-    jumlah_dibayar: {
+    amount_paid: {
       type: Number,
       required: true,
-      min: [0, "Jumlah yang dibayar tidak bisa kurang dari 0"],
+      min: [0],
     },
-    sisa_pembayaran: {
+    remaining_payment: {
       type: Number,
       required: true,
-      min: [0, "Sisa pembayaran tidak bisa kurang dari 0"],
+      min: [0],
     },
-    tanggal_pembayaran: {
+    payment_date: {
       type: Date,
       default: Date.now,
     },

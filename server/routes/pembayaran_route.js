@@ -2,12 +2,12 @@ const express = require("express");
 const router = express.Router();
 const pembayaran_controller = require("../controllers/pembayaran_controller");
 
-router.post("/pembayaran/", pembayaran_controller.createPembayaran);
-
-// Route untuk melihat pembayaran berdasarkan penjualan_id
+router.get("/pembayaran", pembayaran_controller.getAllPembayaran);
+router.get("/pembayaran/:id", pembayaran_controller.getPembayaranById);
 router.get(
-  "/pembayaran/:penjualan_id",
-  pembayaran_controller.getPembayaranByPenjualan
+  "/pembayaran-detail/:penjualan_id",
+  pembayaran_controller.getPembayaranByPenjualanId
 );
+router.post("/pembayaran", pembayaran_controller.createPembayaran);
 
 module.exports = router;
