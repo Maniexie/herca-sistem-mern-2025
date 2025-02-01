@@ -1,8 +1,33 @@
-# React + Vite
+# My Frontend Sistem
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About Project
 
-Currently, two official plugins are available:
+This project is a sistem management RESTful API built with Tailwind CSS + React
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Getting Started
+
+## How to Use
+
+Clone the project
+
+```bash
+  git clone https://github.com/Maniexie/herca-sistem-mern-2025.git
+```
+
+Change Directory or Entry **client** Folder
+
+```bash
+  cd client
+```
+
+Install required dependencies
+
+```bash
+  npm i
+```
+
+Run development server
+
+```bash
+  npm run dev
+```
