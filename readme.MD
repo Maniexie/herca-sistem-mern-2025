@@ -1,12 +1,40 @@
-# My RESTful API
+# Sistem management MERN Stack
 
 ## About Project
 
-This project is a sistem management RESTful API built with Node.js, Express.js, and MongoDB.
+This project is a sistem management built with Tailwind CSS + React + Node.js, Express.js, and MongoDB.
 
 # Getting Started
 
-## How to Use
+## How to Use Frontend & Backend
+
+### Frontend:
+
+Clone the project
+
+```bash
+  git clone https://github.com/Maniexie/herca-sistem-mern-2025.git
+```
+
+Change Directory or Entry **client** Folder
+
+```bash
+  cd client
+```
+
+Install required dependencies
+
+```bash
+  npm i
+```
+
+Run development server
+
+```bash
+  npm run dev
+```
+
+### Backend:
 
 Clone the project
 
