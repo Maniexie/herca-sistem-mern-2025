@@ -10,3 +10,14 @@ export const getMarketing = async (endpoint) => {
     throw error;
   }
 };
+
+export const addMarketing = async (endpoint, data) => {
+  try {
+    const response = await axiosInstance.post(endpoint, data);
+    // console.log(response.data.data);
+    return response.data.data;
+  } catch (error) {
+    console.log("Error addMarketing Data: " + error);
+    throw error;
+  }
+};
