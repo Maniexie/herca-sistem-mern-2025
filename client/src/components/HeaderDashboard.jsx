@@ -10,6 +10,7 @@ const HeaderDashboard = () => {
 
     return (
         <>
+            {/* Mode Web */}
             <nav className="bg-gray-400 text-white p-5 flex justify-between items-center max-md:hidden">
                 <h2 className="text-lg font-semibold">{headerTitle}</h2>
                 <div className="flex items-center space-x-4">
@@ -21,7 +22,7 @@ const HeaderDashboard = () => {
                     />
                 </div>
             </nav>
-
+            {/* mode mobile */}
             <nav className='bg-gray-400 text-white p-5 flex justify-between items-center transition-all duration-300 ease-in-out md:hidden'>
                 <h2 className="text-lg font-semibold text">{headerTitle}</h2>
                 <ul>
@@ -35,7 +36,7 @@ const HeaderDashboard = () => {
                     </li>
                 </ul>
                 <ul
-                    className={`absolute top-16 left-0 border-t-4 border-t-amber-50 divide-y-2 hover:divide-amber-200 w-full bg-gray-900 p-3 md:hidden transition-transform duration-300 ease-in-out transform ${isOpen
+                    className={`absolute top-16 left-0 border-t-4 border-t-amber-50 divide-y-2 hover:divide-amber-200 w-full bg-gray-900 p-3  transition-transform duration-300 ease-in-out transform z-50 ${isOpen
                         ? "block opacity-100 translate-y-0"
                         : "hidden opacity-0 translate-y-8"
                         }`}
@@ -45,7 +46,7 @@ const HeaderDashboard = () => {
                         <Link to="/dashboard" className='hover:bg-cyan-600 hover:rounded-md p-3 hover:p-1 w-full ' onClick={() => setOpen(false)}>Dashboard</Link>
                     </li>
                     <li>
-                        <Link to="/penjualan" className='hover:bg-cyan-600 hover:rounded-md p-3 hover:p-1 w-full ' onClick={() => setOpen(false)}>Penjualan</Link>
+                        <Link to="/penjualan" className='hover:bg-cyan-600 hover:rounded-md p-3 hover:p-1 w-full' onClick={() => setOpen(false)}>Penjualan</Link>
                     </li>
                     <li>
                         <Link to="/pembayaran" className='hover:bg-cyan-600 hover:rounded-md p-3 hover:p-1 w-full ' onClick={() => setOpen(false)}>Pembayaran</Link>

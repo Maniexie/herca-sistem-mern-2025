@@ -27,13 +27,16 @@ const Table = ({ position, handleOpen }) => {
     if (error) return <p>{error}</p>
     return (
         <div className=''>
-            <div className="w-full sticky top-0 z-50">
+            <div className="w-full sticky top-0 z-0">
                 <div className="flex justify-between items-center px-5 py-0">
                     <div className='flex flex-col mt-1'>
                         <h3 className="text-lg font-semibold ml-3 text-slate-800">Daftar Nama {position}</h3>
                         <p className="text-slate-500 mb-5 ml-3">Berikut adalah daftar nama {position}</p>
+                        {/* mobile */}
+                        <button onClick={() => setIsOpen(true)} className='bg-sky-500 p-3 mr-3 rounded-2xl hover:bg-sky-800 text-amber-100 cursor-pointer  md:hidden -mt-3 mb-2'>Add Marketing</button>
                     </div>
-                    <button onClick={() => setIsOpen(true)} className='bg-sky-500 p-3 mr-3 rounded-2xl hover:bg-sky-800 text-amber-100 cursor-pointer'>Add Marketing</button>
+                    {/* web */}
+                    <button onClick={() => setIsOpen(true)} className='bg-sky-500 p-3 mr-3 rounded-2xl hover:bg-sky-800 text-amber-100 cursor-pointer max-md:hidden'>Add Marketing</button>
                 </div>
             </div>
 
